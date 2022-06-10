@@ -1,5 +1,3 @@
-using System.Collections.Immutable;
-using Amazon.DynamoDBv2.DocumentModel;
 using Amazon.Lambda.Core;
 using Perfume.Models;
 
@@ -10,13 +8,6 @@ namespace perfume_stats;
 
 public class Function
 {
-    
-    /// <summary>
-    /// A simple function that takes a string and does a ToUpper
-    /// </summary>
-    /// <param name="input"></param>
-    /// <param name="context"></param>
-    /// <returns></returns>
     public string FunctionHandler(List<PerfumeDbItem> items, ILambdaContext context)
     {
         Console.WriteLine($"Found {items.Count} perfumes.");
